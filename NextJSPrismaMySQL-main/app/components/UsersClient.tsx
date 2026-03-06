@@ -64,7 +64,10 @@ export default function UsersClient() {
   }
 
   useEffect(() => {
-    loadUsers();
+    const fetchData = async () => {
+      await loadUsers();
+    };
+    fetchData();
   }, []);
 
   return (

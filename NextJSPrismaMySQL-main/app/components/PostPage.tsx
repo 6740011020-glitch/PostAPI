@@ -25,7 +25,7 @@ export default function PostPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("/api/users?type=post");
+        const response = await fetch("/api/posts");
         if (!response.ok) {
           throw new Error("Failed to fetch posts");
         }
